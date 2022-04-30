@@ -8,8 +8,5 @@ meesleep is a behavior check tool to help you develop good sleep habits.
 It allows you to record and visualize whether you are practicing the behaviors you need to work on if you want to wake up refreshed in the morning and have a good day.
 
 ### 特徴(Features)
-1. 毎日寝る前に、シンプルな質問に答えるだけです。
-2. 睡眠習慣を記録し、良い睡眠の習慣を作れているかを確認することができます。
-
-1. All you have to do is answer a simple question every day before you go to bed.
-2. You can record your sleep habits and see if you are creating good sleep habits.
+1. 毎日寝る前に、シンプルな質問に答えるだけです。All you have to do is answer a simple question every day before you go to bed.
+2. 睡眠習慣を記録し、良い睡眠の習慣を作れているかを確認することができます。You can record your sleep habits and see if you are creating good sleep habits.
