@@ -9,7 +9,9 @@ It allows you to record and visualize whether you are practicing the behaviors y
 
 ### 特徴(Features)
 * 毎日寝る前に、シンプルな質問に答えるだけです。
+
 All you have to do is answer a simple question every day before you go to bed.
 
 * 睡眠習慣を記録し、良い睡眠の習慣を作れているかを確認することができます。
+
 You can record your sleep habits and see if you are creating good sleep habits.
