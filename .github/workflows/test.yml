@@ -1,4 +1,4 @@
-name: ci with github actions
+name: Test
 
 on:
   push:
