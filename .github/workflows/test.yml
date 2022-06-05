@@ -56,8 +56,9 @@ jobs:
     - name: yarn install
       run:  yarn install --check-files
 
-    - name: Setup test DB
-      run: bundle exec rails db:setup
+    # schemaファイルができたらコメントアウトを外す
+    # - name: Setup test DB
+    #   run: bundle exec rails db:setup
 
     - name: Run tests
       run: bundle exec rspec
