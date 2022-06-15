@@ -16,3 +16,6 @@ ja:
   devise:
     shared:
       minimum_password_length: "（%{count}文字以上）"
+    registrations:
+      edit:
+        title: ユーザー編集

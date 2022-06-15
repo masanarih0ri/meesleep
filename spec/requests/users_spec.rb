@@ -11,7 +11,7 @@ RSpec.describe 'Users', type: :request do
 
       subject { get edit_user_registration_path }
 
-      it 'renders user edit page' do
+      it 'should render user edit page' do
         subject
         expect(response).to have_http_status(:ok)
       end
@@ -24,6 +24,19 @@ RSpec.describe 'Users', type: :request do
         subject
         expect(response).to redirect_to new_user_session_path
       end
+    end
+  end
+
+  describe 'PUT /users' do
+    let!(:user) { create(:user) }
+    let(:params) { { user: { name: 'new_user_name' } } }
+
+    before { sign_in user }
+    subject { put user_registration_path, params: params }
+
+    it 'should update user data' do
+      subject
+      expect(user.reload.name).to eq 'new_user_name'
     end
   end
 end
