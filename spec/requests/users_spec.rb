@@ -3,7 +3,6 @@
 require 'rails_helper'
 
 RSpec.describe 'Users', type: :request do
-
   describe 'GET /users/edit' do
     let!(:user) { create(:user) }
     context 'when the user is logged in' do
@@ -29,10 +28,10 @@ RSpec.describe 'Users', type: :request do
 
   describe 'PUT /users' do
     let!(:user) { create(:user) }
-    let(:params) { { user: { name: 'new_user_name' } } }
+    let(:user_params) { { user: { name: 'new_user_name' } } }
 
     before { sign_in user }
-    subject { put user_registration_path, params: params }
+    subject { put user_registration_path, params: user_params }
 
     it 'should update user data' do
       subject
