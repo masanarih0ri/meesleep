@@ -1,6 +1,7 @@
 = form_with(model: log, url: url, local: true) do |f|
   = f.hidden_field :user_id, value: user.id
-  / = f.hidden_field :score, value: log_score
+  / とりあえず固定値を渡す
+  = f.hidden_field :score, value: 40
   .form-item
     = f.label :registered_on, '日付'
     = f.date_field :registered_on
@@ -8,10 +9,9 @@
     - questions.each do |question|
       = "#{question.content}"
       = f.fields_for :answers do |answer|
+        = answer.hidden_field :question_id, value: question.id
         = answer.label :is_good_habit, 'はい'
         = answer.radio_button :is_good_habit, true
         = answer.label :is_good_habit, 'いいえ'
         = answer.radio_button :is_good_habit, false
   = f.submit '登録する'
-/ answerを複数作成する必要がある
-/ bulk_insertの方がいい？
