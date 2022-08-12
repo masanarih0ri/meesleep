@@ -7,7 +7,7 @@ class LogsController < ApplicationController
     @user = current_user
     @log = Log.new
     @questions = Question.order(:id).where(is_active: true)
-    @answers = @log.answers.build
+    @log.answers.build
   end
 
   def create
@@ -15,9 +15,7 @@ class LogsController < ApplicationController
     @log = Log.new(log_params)
     @questions = Question.order(:id).where(is_active: true)
     
-    
     begin
-      binding.irb
       @log.save! if @log.present?
       flash[:success] = '作成しました'
       redirect_to logs_path
