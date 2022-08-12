@@ -14,7 +14,7 @@ class LogsController < ApplicationController
     @user = current_user
     @log = Log.new(log_params)
     @questions = Question.order(:id).where(is_active: true)
-    
+
     begin
       @log.save! if @log.present?
       flash[:success] = '作成しました'
@@ -33,7 +33,7 @@ class LogsController < ApplicationController
       :user_id,
       :score,
       :registered_on,
-      answers_attributes: [:log_id, :question_id, :is_good_habit, :_destroy]
+      answers_attributes: %i[log_id question_id is_good_habit _destroy]
     )
   end
 end
