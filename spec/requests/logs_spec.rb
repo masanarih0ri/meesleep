@@ -47,7 +47,6 @@ RSpec.describe 'Logs', type: :request do
     let(:params) do
       {
         log: {
-          user_id: user.id,
           score: 40,
           registered_on: '2022-08-12'
         },
