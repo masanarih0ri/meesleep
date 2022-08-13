@@ -6,22 +6,20 @@ class LogsController < ApplicationController
   def new
     @user = current_user
     @log = Log.new
-    @questions = Question.order(:id).where(is_active: true)
-    @log.answers.build
+    Question.order(:id).where(is_active: true).each do |question|
+      @log.answers.build(question:)
+    end
   end
 
   def create
     @user = current_user
     @log = Log.new(log_params)
-    @questions = Question.order(:id).where(is_active: true)
 
-    begin
-      @log.save! if @log.present?
-      flash[:success] = '作成しました'
+    if @log.save
+      flash[:notice] = '作成しました'
       redirect_to logs_path
-    rescue StandardError => e
-      logger.error(e)
-      flash[:danger] = @log.errors.full_messages
+    else
+      flash[:alert] = @log.errors.full_messages
       render :new
     end
   end
