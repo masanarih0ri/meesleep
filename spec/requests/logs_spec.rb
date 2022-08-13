@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Logs', type: :request do
-  # TODO ログインしていないときの挙動も後でテストに追加する
+  # TODO: ログインしていないときの挙動も後でテストに追加する
   describe 'GET /logs' do
     let!(:user) { create(:user) }
 
@@ -19,7 +19,6 @@ RSpec.describe 'Logs', type: :request do
     end
 
     context 'when the user is not logged in' do
-
     end
   end
 
@@ -38,7 +37,6 @@ RSpec.describe 'Logs', type: :request do
     end
 
     context 'when the user is not logged in' do
-
     end
   end
 
@@ -51,7 +49,7 @@ RSpec.describe 'Logs', type: :request do
         log: {
           user_id: user.id,
           score: 40,
-          registered_on: "2022-08-12"
+          registered_on: '2022-08-12'
         },
         answers_attributes: {
           '0': {
@@ -69,7 +67,7 @@ RSpec.describe 'Logs', type: :request do
     context 'when the user is logged in' do
       before { sign_in user }
 
-      subject { post logs_path, params: params }
+      subject { post logs_path, params: }
 
       it 'creates new log' do
         expect { subject }.to change { Log.count }.by(1)
@@ -82,8 +80,6 @@ RSpec.describe 'Logs', type: :request do
     end
 
     context 'when the user is not logged in' do
-
     end
   end
 end
-# Parameters: {"authenticity_token"=>"[FILTERED]", "log"=>{"user_id"=>"1", "score"=>"40", "registered_on"=>"2022-08-18", "answers_attributes"=>{"0"=>{"question_id"=>"1", "is_good_habit"=>"true"}, "1"=>{"question_id"=>"2", "is_good_habit"=>"false"}}}, "commit"=>"登録する"}
