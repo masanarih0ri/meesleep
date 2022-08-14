@@ -6,7 +6,7 @@ describe Log, type: :model do
   describe '#fill_score' do
     subject { log.fill_score }
     let(:user) { create(:user) }
-    let(:log) { build(:log, user: user, score: nil) }
+    let(:log) { build(:log, user:, score: nil) }
     let!(:answer1) { log.answers.build(question: question1, is_good_habit: true) }
     let!(:answer2) { log.answers.build(question: question2, is_good_habit: false) }
     let(:question1) { create(:question) }
