@@ -10,7 +10,6 @@ class Log < ApplicationRecord
   before_validation :fill_score
 
   validates :user_id, presence: true
-  validates :score, presence: true
   validates :registered_on, presence: true
 
   def fill_score
