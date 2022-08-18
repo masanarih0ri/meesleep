@@ -42,6 +42,9 @@ RSpec.describe 'Logs', type: :request do
 
   describe 'POST /logs' do
     let(:user) { create(:user) }
+    let!(:log) { build(:log, user: user, score: nil) }
+    let!(:answer1) { log.answers.build(question: question1, is_good_habit: nil) }
+    let!(:answer2) { log.answers.build(question: question2, is_good_habit: nil) }
     let(:question1) { create(:question) }
     let(:question2) { create(:question, content: '質問2') }
     let(:params) do
