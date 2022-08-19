@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 
 class LogsController < ApplicationController
-  def index; end
+  def index
+    @logs = Log.all.order(registered_on: 'DESC')
+  end
 
   def new
     @user = current_user
