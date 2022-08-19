@@ -28,7 +28,6 @@ class LogsController < ApplicationController
 
   def log_params
     params.require(:log).permit(
-      :score,
       :registered_on,
       answers_attributes: %i[log_id question_id is_good_habit _destroy]
     ).merge(user_id: current_user.id)
