@@ -199,5 +199,14 @@ RSpec.describe 'Logs', type: :request do
         expect(log.reload.registered_on).to eq '2022-08-12'
       end
     end
+
+    context 'when the user is not logged in' do
+      subject { patch log_path(log), params: }
+
+      it 'redirects to user login page' do
+        subject
+        expect(response).to redirect_to new_user_session_path
+      end
+    end
   end
 end
