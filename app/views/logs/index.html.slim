@@ -1,0 +1,17 @@
+h1 = '睡眠習慣ログ一覧'
+= link_to '新規作成', new_log_path
+
+table
+  thead
+    tr
+      th = '日付'
+      th = '睡眠ログスコア'
+      th
+      th
+  tbody
+    - @logs.each do |log|
+      tr
+        td = log.registered_on
+        td = log.score
+        td = '編集'
+        td = '削除'
