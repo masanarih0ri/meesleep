@@ -2,7 +2,7 @@
 
 class LogsController < ApplicationController
   def index
-    @logs = Log.all.order(registered_on: 'DESC')
+    @logs = current_user.logs.order(registered_on: 'DESC')
   end
 
   def new
