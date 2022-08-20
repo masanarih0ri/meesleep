@@ -13,7 +13,7 @@ class LogsController < ApplicationController
   end
 
   def create
-    @log = Log.new(log_params)
+    @log = Log.new(create_params)
 
     if @log.save
       flash[:notice] = 'ログを登録しました'
@@ -21,6 +21,22 @@ class LogsController < ApplicationController
     else
       flash[:alert] = 'ログを登録できませんでした'
       render :new
+    end
+  end
+
+  def edit
+    @log = current_user.logs.find(params[:id])
+  end
+
+  def update
+    @log = current_user.logs.find(params[:id])
+
+    if @log.update(update_params)
+      flash[:notice] = 'ログを更新しました'
+      redirect_to logs_path
+    else
+      flash[:alert] = 'ログを更新できませんでした'
+      render :edit
     end
   end
 
@@ -36,10 +52,17 @@ class LogsController < ApplicationController
 
   private
 
-  def log_params
+  def create_params
     params.require(:log).permit(
       :registered_on,
       answers_attributes: %i[log_id question_id is_good_habit _destroy]
+    ).merge(user_id: current_user.id)
+  end
+
+  def update_params
+    params.require(:log).permit(
+      :registered_on,
+      answers_attributes: %i[id log_id question_id is_good_habit _destroy]
     ).merge(user_id: current_user.id)
   end
 end
