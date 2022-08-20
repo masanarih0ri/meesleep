@@ -15,6 +15,16 @@ RSpec.describe 'Logs', type: :request do
         subject
         expect(response).to have_http_status(:ok)
       end
+
+      context 'when user has two logs' do
+        let!(:logs) { create_list(:log, 2, user:) }
+
+        it 'shoule render log data' do
+          subject
+          expect(response.body).to include logs.first.score.to_s
+          expect(response.body).to include logs.last.score.to_s
+        end
+      end
     end
 
     context 'when the user is not logged in' do

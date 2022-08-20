@@ -7,7 +7,7 @@ class Log < ApplicationRecord
 
   accepts_nested_attributes_for :answers, allow_destroy: true
 
-  before_validation :fill_score
+  before_create :fill_score
 
   validates :user_id, presence: true
   validates :registered_on, presence: true, uniqueness: { scope: :user_id }
