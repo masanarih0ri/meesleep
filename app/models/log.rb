@@ -10,7 +10,7 @@ class Log < ApplicationRecord
   before_validation :fill_score
 
   validates :user_id, presence: true
-  validates :registered_on, presence: true
+  validates :registered_on, presence: true, uniqueness: { scope: :user_id }
 
   def fill_score
     self.score = ((answers.select(&:is_good_habit).size.to_f / answers.size) * 100).round(0)
