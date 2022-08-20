@@ -125,5 +125,18 @@ RSpec.describe 'Logs', type: :request do
         expect { subject }.to change { Log.count }.by(-1)
       end
     end
+
+    context 'when the user is not logged in' do
+      subject { delete log_path(log) }
+
+      it 'does not delete log' do
+        expect { subject }.to change { Log.count }.by(0)
+      end
+
+      it 'redirects to user login page' do
+        subject
+        expect(response).to redirect_to new_user_session_path
+      end
+    end
   end
 end
