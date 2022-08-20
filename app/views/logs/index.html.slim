@@ -7,7 +7,7 @@ table
   thead
     tr
       th = '日付'
-      th = '睡眠ログスコア'
+      th = '睡眠習慣スコア'
       th
       th
   tbody
@@ -16,4 +16,4 @@ table
         td = log.registered_on
         td = log.score
         td = '編集'
-        td = '削除'
+        td = link_to '削除', "/logs/#{log.id}", method: :delete,  data: { confirm: '本当に削除しますか？'}
