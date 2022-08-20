@@ -7,7 +7,7 @@ class LogsController < ApplicationController
 
   def new
     @log = Log.new
-    Question.order(:id).where(is_active: true).each do |question|
+    Question.active.each do |question|
       @log.answers.build(question:)
     end
   end

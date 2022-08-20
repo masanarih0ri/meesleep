@@ -6,4 +6,6 @@ class Question < ApplicationRecord
 
   validates :content, presence: true
   validates :is_active, inclusion: { in: [true, false] }
+
+  scope :active, -> { order(:id).where(is_active: true) }
 end
