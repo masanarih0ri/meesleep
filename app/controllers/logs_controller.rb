@@ -6,7 +6,6 @@ class LogsController < ApplicationController
   end
 
   def new
-    @user = current_user
     @log = Log.new
     Question.order(:id).where(is_active: true).each do |question|
       @log.answers.build(question:)
@@ -14,7 +13,6 @@ class LogsController < ApplicationController
   end
 
   def create
-    @user = current_user
     @log = Log.new(log_params)
 
     if @log.save
