@@ -3,7 +3,6 @@
 require 'rails_helper'
 
 RSpec.describe 'Logs', type: :request do
-  # TODO: ログインしていないときの挙動も後でテストに追加する
   describe 'GET /logs' do
     let!(:user) { create(:user) }
 
@@ -19,6 +18,12 @@ RSpec.describe 'Logs', type: :request do
     end
 
     context 'when the user is not logged in' do
+      subject { get logs_path }
+
+      it 'redirects to user login page' do
+        subject
+        expect(response).to redirect_to new_user_session_path
+      end
     end
   end
 
@@ -37,6 +42,12 @@ RSpec.describe 'Logs', type: :request do
     end
 
     context 'when the user is not logged in' do
+      subject { get new_log_path }
+
+      it 'redirects to user login page' do
+        subject
+        expect(response).to redirect_to new_user_session_path
+      end
     end
   end
 
@@ -78,6 +89,16 @@ RSpec.describe 'Logs', type: :request do
     end
 
     context 'when the user is not logged in' do
+      subject { post logs_path, params: }
+
+      it 'does not create new log' do
+        expect { subject }.to change { Log.count }.by(0)
+      end
+
+      it 'redirects to user login page' do
+        subject
+        expect(response).to redirect_to new_user_session_path
+      end
     end
   end
 end
