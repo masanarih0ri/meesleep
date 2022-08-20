@@ -111,4 +111,19 @@ RSpec.describe 'Logs', type: :request do
       end
     end
   end
+
+  describe 'DELETE /logs/:id' do
+    let(:user) { create(:user) }
+    let!(:log) { create(:log, user:) }
+
+    context 'when the user is logged in' do
+      before { sign_in user }
+
+      subject { delete log_path(log) }
+
+      it 'should delete log' do
+        expect { subject }.to change { Log.count }.by(-1)
+      end
+    end
+  end
 end
