@@ -16,10 +16,10 @@ class LogsController < ApplicationController
     @log = Log.new(log_params)
 
     if @log.save
-      flash[:notice] = '作成しました'
+      flash[:notice] = 'ログを登録しました'
       redirect_to logs_path
     else
-      flash[:alert] = @log.errors.full_messages
+      flash[:alert] = 'ログを登録できませんでした'
       render :new
     end
   end
