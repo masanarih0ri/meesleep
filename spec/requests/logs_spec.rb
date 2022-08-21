@@ -139,4 +139,74 @@ RSpec.describe 'Logs', type: :request do
       end
     end
   end
+
+  describe 'GET /logs/:id/edit' do
+    let(:user) { create(:user) }
+    let!(:log) { create(:log, user:) }
+
+    context 'when the user is logged in' do
+      before { sign_in user }
+
+      subject { get edit_log_path(log) }
+
+      it 'should render logs new page' do
+        subject
+        expect(response).to have_http_status(:ok)
+      end
+    end
+
+    context 'when the user is not logged in' do
+      subject { get edit_log_path(log) }
+
+      it 'redirects to user login page' do
+        subject
+        expect(response).to redirect_to new_user_session_path
+      end
+    end
+  end
+
+  describe 'PATCH /logs/:id' do
+    let(:user) { create(:user) }
+    let!(:log) { create(:log, user:) }
+    let(:question1) { create(:question) }
+    let(:question2) { create(:question, content: '質問2') }
+    let(:params) do
+      {
+        log: {
+          registered_on: '2022-08-12',
+          answers_attributes: {
+            '0': {
+              question_id: question1.id,
+              is_good_habit: true
+            },
+            '1': {
+              question_id: question2.id,
+              is_good_habit: true
+            }
+          }
+        },
+        id: log.id
+      }
+    end
+
+    context 'when the user is logged in' do
+      before { sign_in user }
+
+      subject { patch log_path(log), params: }
+
+      it 'should update log data' do
+        subject
+        expect(log.reload.registered_on).to eq '2022-08-12'
+      end
+    end
+
+    context 'when the user is not logged in' do
+      subject { patch log_path(log), params: }
+
+      it 'redirects to user login page' do
+        subject
+        expect(response).to redirect_to new_user_session_path
+      end
+    end
+  end
 end
