@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class LogsController < ApplicationController
+  before_action :set_current_user_log, only: %i[edit update destroy]
+
   def index
     @logs = current_user.logs.order(registered_on: 'DESC')
   end
@@ -24,13 +26,9 @@ class LogsController < ApplicationController
     end
   end
 
-  def edit
-    @log = current_user.logs.find(params[:id])
-  end
+  def edit; end
 
   def update
-    @log = current_user.logs.find(params[:id])
-
     if @log.update(update_params)
       flash[:notice] = 'ログを更新しました'
       redirect_to logs_path
@@ -41,7 +39,6 @@ class LogsController < ApplicationController
   end
 
   def destroy
-    @log = current_user.logs.find(params[:id])
     if @log.destroy
       flash[:notice] = 'ログを削除しました'
       redirect_to logs_path
@@ -64,5 +61,9 @@ class LogsController < ApplicationController
       :registered_on,
       answers_attributes: %i[id log_id question_id is_good_habit _destroy]
     ).merge(user_id: current_user.id)
+  end
+
+  def set_current_user_log
+    @log = current_user.logs.find(params[:id])
   end
 end
