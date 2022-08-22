@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   root 'home#index'
 
   resources :logs, only: [:index, :new, :create, :destroy, :edit, :update]
+  
+  mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
 end

@@ -11,8 +11,11 @@ ja:
               blank: メールアドレスが入力されていません
             password:
               blank: パスワードが入力されていません
+              too_short: が必要な文字数に達していません
             name:
               blank: 名前が入力されていません
+            password_confirmation:
+              confirmation: が正しく入力されているかご確認をお願いします
   devise:
     shared:
       minimum_password_length: "（%{count}文字以上）"
