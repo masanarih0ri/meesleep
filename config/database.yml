@@ -81,6 +81,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
   database: sleeple_production
   username: sleeple
   password: <%= ENV['SLEEPLE_DATABASE_PASSWORD'] %>
