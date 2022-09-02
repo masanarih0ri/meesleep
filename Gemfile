@@ -32,6 +32,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'devise'
 gem 'devise-i18n'
 gem 'meta-tags'
+gem 'net-imap'
 gem 'net-pop'
 gem 'net-smtp', require: false
 gem 'slim'
