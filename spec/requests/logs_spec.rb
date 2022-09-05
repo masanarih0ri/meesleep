@@ -7,7 +7,10 @@ RSpec.describe 'Logs', type: :request do
     let!(:user) { create(:user) }
 
     context 'when the user is logged in' do
-      before { sign_in user }
+      before do
+        user.confirm
+        sign_in user
+      end
 
       subject { get logs_path }
 
@@ -41,7 +44,10 @@ RSpec.describe 'Logs', type: :request do
     let!(:user) { create(:user) }
 
     context 'when the user is logged in' do
-      before { sign_in user }
+      before do
+        user.confirm
+        sign_in user
+      end
 
       subject { get new_log_path }
 
@@ -84,7 +90,10 @@ RSpec.describe 'Logs', type: :request do
     end
 
     context 'when the user is logged in' do
-      before { sign_in user }
+      before do
+        user.confirm
+        sign_in user
+      end
 
       subject { post logs_path, params: }
 
@@ -117,7 +126,10 @@ RSpec.describe 'Logs', type: :request do
     let!(:log) { create(:log, user:) }
 
     context 'when the user is logged in' do
-      before { sign_in user }
+      before do
+        user.confirm
+        sign_in user
+      end
 
       subject { delete log_path(log) }
 
@@ -145,7 +157,10 @@ RSpec.describe 'Logs', type: :request do
     let!(:log) { create(:log, user:) }
 
     context 'when the user is logged in' do
-      before { sign_in user }
+      before do
+        user.confirm
+        sign_in user
+      end
 
       subject { get edit_log_path(log) }
 
@@ -190,7 +205,10 @@ RSpec.describe 'Logs', type: :request do
     end
 
     context 'when the user is logged in' do
-      before { sign_in user }
+      before do
+        user.confirm
+        sign_in user
+      end
 
       subject { patch log_path(log), params: }
 
