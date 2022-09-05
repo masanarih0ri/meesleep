@@ -117,4 +117,17 @@ Rails.application.configure do
   # config.active_record.database_selector = { delay: 2.seconds }
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
+  config.action_mailer.delivery_method = :smtp
+  host = 'sleeple-production.onrender.com'
+  config.action_mailer.default_url_options = { host: host, protocol: 'https' }
+
+  ActionMailer::Base.smtp_settings = {
+    address: 'smtp.gmail.com',
+    domain: 'gmail.com',
+    port: 587,
+    user_name: ENV['GMAIL_ADDRESS'],
+    password: ENV['GMAIL_APP_PASSWORD'],
+    authentication: :login,
+    enable_starttls_auto: true
+  }
 end
