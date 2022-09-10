@@ -3,7 +3,7 @@
     = f.label :registered_on, '日付'
     = f.date_field :registered_on
   .form-item
-    = f.fields_for :answers do |answer_form|
+    = f.fields_for :answers, log.answers.sort_by(&:question_id) do |answer_form|
       = answer_form.object.question.content
       = answer_form.hidden_field :question_id, value: answer_form.object.question.id
       = answer_form.label :is_good_habit, 'はい'
