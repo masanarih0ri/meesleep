@@ -1,0 +1,34 @@
+.content_wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: #e0e0e0;
+
+  .content {
+    max-width: 480px;
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: white;
+    margin: 0 auto;
+
+    .main {
+      padding: 32px 20px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      background-color: skyblue;
+    }
+
+    .footer {
+      // footerの位置をどうにかしたい場合
+      // https: //senoweb.jp/note/footer-position/ 参考にする
+      background-color: skyblue;
+      text-align: center;
+      width: 100%;
+      line-height: 18px;
+      padding: 8px;
+      font-size: 12px;
+    }
+  }
+}
