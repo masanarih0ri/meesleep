@@ -18,9 +18,6 @@ html lang="ja"
           .menu_contents
             - if user_signed_in?
               = link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'header_logout'
-            - else
-              = link_to 'ログイン', new_user_session_path, class: 'header_login'
-              = link_to '新規登録', new_user_registration_path, class: 'header_sign_in'
         .main
           - if current_user.present?
             p = current_user.name
