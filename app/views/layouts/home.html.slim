@@ -12,17 +12,7 @@ html lang="ja"
   body
     .content_wrapper
       .content
-        .header
-          .logo
-            p = 'ロゴ'
-          .menu_contents
-            - if user_signed_in?
-              = link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'header_logout'
         .main
-          - if current_user.present?
-            p = current_user.name
-          - if notice
-            p = notice
-          - if alert
-            p = alert
           = yield
+        .footer
+          | ©︎ 2022- masanari hori
