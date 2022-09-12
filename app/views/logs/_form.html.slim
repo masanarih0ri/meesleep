@@ -7,6 +7,7 @@
       .form_item_detail
         = answer_form.object.question.content
         = answer_form.hidden_field :question_id, value: answer_form.object.question.id
+      .form_item_buttons
         = answer_form.label :is_good_habit, 'はい'
         = answer_form.radio_button :is_good_habit, true
         = answer_form.label :is_good_habit, 'いいえ'
