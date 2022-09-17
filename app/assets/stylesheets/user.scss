@@ -1,3 +1,10 @@
+.user_sign_in_title {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 36px;
+  line-height: 32px;
+}
+
 .user_form_field {
   display: block;
   margin: auto auto;
@@ -10,11 +17,17 @@
 }
 
 .user_form_info_text {
+  margin-bottom: 16px;
   text-align: center;
 }
 
+.user_form_info_link {
+  text-decoration: underline;
+  color: skyblue;
+}
+
 .remember_field {
-  margin-bottom: 16px;
+  margin-bottom: 36px;
 }
 
 .user_submit_button {
@@ -26,5 +39,5 @@
   background-color: skyblue;
   padding: 16px 8px;
   border-radius: 4px;
-  margin-bottom: 16px;
+  margin-bottom: 36px;
 }
