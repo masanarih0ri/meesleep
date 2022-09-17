@@ -6,10 +6,10 @@ h2 = t('devise.sessions.new.sign_in')
   .field
     = f.password_field :password, autocomplete: "current-password", placeholder: 'Password', class: 'user_form_field'
   - if devise_mapping.rememberable?
-    .field
-    = f.check_box :remember_me
-    = f.label :remember_me
+    .remember_field
+      = f.check_box :remember_me
+      = f.label :remember_me
   .actions
-    = f.submit t('devise.shared.links.sign_in')
+    = f.submit t('devise.shared.links.sign_in'), class: 'user_submit_button'
 
 = render "users/shared/links"
