@@ -15,13 +15,17 @@
 .top_register_link {
   max-width: 240px;
   margin: 0 auto;
-  padding: 16px 24px;
   background-color: skyblue;
   display: block;
   text-align: center;
   margin-bottom: 36px;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.top_register_link_button {
+  display: block;
+  padding: 16px 24px;
 }
 
 .top_login_link {

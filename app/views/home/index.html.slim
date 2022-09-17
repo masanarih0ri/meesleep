@@ -4,10 +4,10 @@
 .top_title
   h1 = '良い睡眠習慣を身につけよう'
 .top_register_link
-  = link_to '無料で新規登録する', new_user_registration_path
+  = link_to '無料で新規登録する', new_user_registration_path, class: 'top_register_link_button'
 .top_login_link
   p.top_login_check_text = '既にアカウントをお持ちですか？'
-  = link_to 'ログインする', '', class: 'top_login_text_link'
+  = link_to 'ログインする', new_user_session_path, class: 'top_login_text_link'
 .top_about
   h3.section_subtitle = 'About'
   h2.section_title = 'mesleepとは？'
@@ -55,4 +55,4 @@
     / この機能は入れるかまだ決めていないので、一旦文言から削除
     / p.top_recommend_detail_text = '習慣を登録すると、睡眠に関しての耳より情報をランダムで見れる機能も搭載していますので、自分の習慣を振り返りながら、睡眠に対しての正しい知識をつけていくことも可能です。'
 .top_register_link
-  = link_to '無料で新規登録する', new_user_registration_path
+  = link_to '無料で新規登録する', new_user_registration_path, class: 'top_register_link_button'
