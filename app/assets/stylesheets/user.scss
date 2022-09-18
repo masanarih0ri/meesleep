@@ -1,0 +1,61 @@
+.user_page_title {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 36px;
+  line-height: 32px;
+}
+
+.user_form_field {
+  display: block;
+  margin: auto auto;
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 16px 0;
+  border-bottom: 2px solid #eaeaea;
+  padding-bottom: 16px;
+  transition: all 0.5s ease 0s;
+
+  &:focus {
+    outline: none;
+    border-bottom: 2px solid skyblue;
+  }
+
+  &::placeholder {
+    color: #757575;
+  }
+}
+
+.user_form_info_text {
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.user_form_info_link {
+  text-decoration: underline;
+  color: skyblue;
+}
+
+.remember_field {
+  margin-bottom: 36px;
+}
+
+.user_submit_button {
+  display: block;
+  width: 100%;
+  text-align: center;
+  max-width: 240px;
+  margin: 0 auto;
+  background-color: skyblue;
+  padding: 16px 8px;
+  border-radius: 4px;
+  margin-bottom: 36px;
+}
+
+.user_delete_button {
+  display: block;
+  color: red;
+  text-decoration: underline;
+  max-width: 200px;
+  margin: 0 auto 36px;
+  text-align: center;
+}
