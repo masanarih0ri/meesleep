@@ -13,12 +13,15 @@
   padding: 16px 0;
   border-bottom: 2px solid #eaeaea;
   padding-bottom: 16px;
-  color: #757575;
   transition: all 0.5s ease 0s;
 
   &:focus {
     outline: none;
     border-bottom: 2px solid skyblue;
+  }
+
+  &::placeholder {
+    color: #757575;
   }
 }
 
@@ -46,4 +49,13 @@
   padding: 16px 8px;
   border-radius: 4px;
   margin-bottom: 36px;
+}
+
+.user_delete_button {
+  display: block;
+  color: red;
+  text-decoration: underline;
+  max-width: 200px;
+  margin: 0 auto 36px;
+  text-align: center;
 }
