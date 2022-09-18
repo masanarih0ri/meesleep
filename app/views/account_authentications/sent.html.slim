@@ -1,0 +1,20 @@
+h2.user_page_title = 'アカウント認証用メール送信完了'
+
+.user_auth_message
+  p.user_auth_message_text = '先ほど登録に利用されたメールアドレスに、アカウント認証用のメールを送信しました。'
+  p.user_auth_message_text = 'メールをご確認いただき、メールに記載されたURLをクリックして、sleepleへの登録を完了してください。'
+
+.user_auth_warning
+  h3.user_auth_warning_title = 'メールが届かない場合'
+
+  p.user_auth_warning_list_title = 'メールが届かない場合、以下をご確認ください。'
+  ul.user_auth_warning_list
+    li.user_auth_warning_list_item = '迷惑メールフォルダに振り分けられていないか確認してください。'
+    li.user_auth_warning_list_item = 'フィルターや転送の設定によって受信ボックス以外に振り分けられていないか確認してください。'
+    li.user_auth_warning_list_item = '現在使用しているメールアドレスが正しいかどうか確認してください。正しくない場合は再設定をしてください。'
+    li.user_auth_warning_list_item = 'メールの配信に数分かかることがございます。数分待った上で、メールが受信できているかを再度ご確認ください。' 
+  
+  h3.user_auth_warning_title = '認証メールの再送信'
+  p.user_auth_warning_list_title = '上記の確認をしても認証メールが届かない場合、お手数ですが以下のリンクからユーザーログインページに進み、認証メールの再送信をお願いいたたします。'
+  
+  = link_to 'ログインページ', new_user_session_path, class: 'user_auth_warning_link'

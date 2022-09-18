@@ -59,3 +59,43 @@
   margin: 0 auto 36px;
   text-align: center;
 }
+
+.user_auth_message {
+  background-color: skyblue;
+  padding: 16px;
+  border-radius: 4px;
+  margin-bottom: 36px;
+
+  .user_auth_message_text {
+    line-height: 24px;
+  }
+}
+
+.user_auth_warning_title {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.user_auth_warning_list_title {
+  margin-bottom: 16px;
+}
+
+.user_auth_warning_list {
+  padding: 16px;
+
+  .user_auth_warning_list_item {
+    margin-bottom: 16px;
+    list-style-type: disc;
+  }
+}
+
+.user_auth_warning_link {
+  display: block;
+  text-align: center;
+  color: skyblue;
+  max-width: 150px;
+  margin: 0 auto;
+  text-decoration: underline;
+}
