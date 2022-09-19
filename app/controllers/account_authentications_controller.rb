@@ -2,7 +2,7 @@
 
 class AccountAuthenticationsController < ApplicationController
   before_action :authenticate_user!, except: [:sent]
-  layout 'home'
+  layout 'static_page'
 
   def sent; end
 end
