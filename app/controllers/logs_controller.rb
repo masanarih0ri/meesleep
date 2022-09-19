@@ -8,7 +8,7 @@ class LogsController < ApplicationController
   end
 
   def new
-    @log = Log.new
+    @log = Log.new(registered_on: Date.current)
     Question.active.each do |question|
       @log.answers.build(question:)
     end
