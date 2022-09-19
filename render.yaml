@@ -9,7 +9,7 @@ services:
     name: sleeple_production
     env: ruby
     region: singapore
-    plan: free
+    plan: starter
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
