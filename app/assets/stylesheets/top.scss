@@ -1,8 +1,11 @@
 .top_logo {
   margin-bottom: 36px;
-  // 後で削除
-  color: red;
-  text-align: center;
+
+  .top_logo_image {
+    display: block;
+    margin: 0 auto;
+    max-width: 240px;
+  }
 }
 
 .top_title {
