@@ -1,15 +1,16 @@
 = form_with(model: log, url: url, local: true) do |f|
-  .form_item
-    = f.label :registered_on, '日付'
+  .log_form_date
+    = f.label :registered_on, '日付', class: 'log_form_date_label'
     = f.date_field :registered_on
-  .form_item
+  .log_form_answer
     = f.fields_for :answers, log.answers.sort_by(&:question_id) do |answer_form|
-      .form_item_detail
-        = answer_form.object.question.content
-        = answer_form.hidden_field :question_id, value: answer_form.object.question.id
-      .form_item_buttons
-        = answer_form.label :is_good_habit, 'はい'
-        = answer_form.radio_button :is_good_habit, true
-        = answer_form.label :is_good_habit, 'いいえ'
-        = answer_form.radio_button :is_good_habit, false
-  = f.submit '登録する'
+      .form_item_contents
+        .form_item_detail
+          = answer_form.object.question.content
+          = answer_form.hidden_field :question_id, value: answer_form.object.question.id
+        .form_item_buttons
+          = answer_form.radio_button :is_good_habit, true, class: 'form_radio_button'
+          = answer_form.label :is_good_habit_true, 'はい', class: 'form_radio_label'
+          = answer_form.radio_button :is_good_habit, false, class: 'form_radio_button'
+          = answer_form.label :is_good_habit_false, 'いいえ', class: 'form_radio_label'
+  = f.submit '登録する', class: 'log_submit_button'

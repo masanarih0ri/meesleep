@@ -1,4 +1,7 @@
 - title '睡眠習慣ログの作成'
-
-h1 = 'ログの新規作成'
+.log_message_to_user
+  - if current_user.present?
+    p = "#{current_user.name}さん"
+    p = '今日はどんな1日でしたか？'
+    p = 'ログを記録して、良い睡眠の習慣を作っていきましょう！'
 = render 'form', log: @log, url: logs_path
