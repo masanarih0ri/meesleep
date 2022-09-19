@@ -70,9 +70,13 @@
     width: 100%;
     border-bottom: 1px solid #e0e0e0;
     padding-bottom: 8px;
+    position: relative;
 
     &::-webkit-calendar-picker-indicator {
-      display: none;
+      opacity: 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
     }
   }
 }
