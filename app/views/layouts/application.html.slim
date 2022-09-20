@@ -19,8 +19,6 @@ html lang="ja"
             - if user_signed_in?
               = link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'header_logout'
         .main
-          - if current_user.present?
-            p = current_user.name
           - if notice
             p = notice
           - if alert
