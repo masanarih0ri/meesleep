@@ -1,5 +1,5 @@
 - title '睡眠習慣ログの編集'
 
-h1 = '睡眠習慣ログの編集'
+h1.log_page_title = '睡眠習慣ログの編集'
 = render 'form', log: @log, url: log_path(@log)
-= link_to '削除', log_path(@log), method: :delete,  data: { confirm: '本当に削除しますか？'}
+= link_to '削除', log_path(@log), method: :delete,  data: { confirm: '本当に削除しますか？'}, class: 'log_delete_button'
