@@ -13,6 +13,10 @@ html lang="ja"
     .content_wrapper
       .content
         .main
+          - if notice
+            p.notice = notice
+          - if alert
+            p.alert = alert
           = yield
         .footer
           | ©︎ 2022- masanari hori

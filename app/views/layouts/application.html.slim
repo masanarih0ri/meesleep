@@ -20,7 +20,7 @@ html lang="ja"
               = link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'header_logout'
         .main
           - if notice
-            p = notice
+            p.notice = notice
           - if alert
-            p = alert
+            p.alert = alert
           = yield
