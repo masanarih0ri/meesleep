@@ -16,7 +16,7 @@ html lang="ja"
           .logo
             p = 'ロゴ'
           .menu_contents
-            = link_to 'ユーザー', edit_user_registration_path, class: 'header_logout'
+            = link_to image_tag('setting.png', class: 'header_setting_image'),edit_user_registration_path, class: 'header_setting_link'
         .main
           - if notice
             p.notice = notice
