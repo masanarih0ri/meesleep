@@ -16,8 +16,7 @@ html lang="ja"
           .logo
             p = 'ロゴ'
           .menu_contents
-            - if user_signed_in?
-              = link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'header_logout'
+            = link_to 'ユーザー', edit_user_registration_path, class: 'header_logout'
         .main
           - if notice
             p.notice = notice

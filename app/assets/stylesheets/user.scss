@@ -54,8 +54,15 @@
 .user_delete_button {
   display: block;
   color: red;
-  text-decoration: underline;
   max-width: 200px;
   margin: 0 auto 36px;
   text-align: center;
+}
+
+.user_logout_link {
+  display: block;
+  text-align: center;
+  margin-bottom: 36px;
+  text-decoration: underline;
+  color: skyblue;
 }
