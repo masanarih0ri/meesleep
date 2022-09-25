@@ -8,7 +8,7 @@ html lang="ja"
     = favicon_link_tag('favicon.ico')
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
-  
+    = render 'layouts/google_analytics'
   body
     .content_wrapper
       .content
