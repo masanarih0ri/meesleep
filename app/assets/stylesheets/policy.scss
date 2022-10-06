@@ -1,0 +1,38 @@
+.policy {
+  margin-bottom: 36px;
+}
+
+.policy_intro {
+  margin-bottom: 36px;
+  line-height: 1.8;
+  font-size: 12px;
+}
+
+.policy_title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.policy_section_title {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.policy_section_ol {
+  list-style-type: decimal;
+
+  .policy_section_ol_item {
+    margin-left: 24px;
+    margin-bottom: 8px;
+    line-height: 1.8;
+  }
+
+  .policy_section_ol_sub_item {
+    margin-left: 48px;
+    margin-bottom: 8px;
+    line-height: 1.8;
+    list-style-type: lower-alpha;
+  }
+}
