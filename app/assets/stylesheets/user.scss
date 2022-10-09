@@ -1,3 +1,5 @@
+@import 'variable';
+
 .user_page_title {
   text-align: center;
   font-size: 20px;
@@ -17,7 +19,7 @@
 
   &:focus {
     outline: none;
-    border-bottom: 2px solid skyblue;
+    border-bottom: 2px solid $main-color;
   }
 
   &::placeholder {
@@ -32,7 +34,7 @@
 
 .user_form_info_link {
   text-decoration: underline;
-  color: skyblue;
+  color: $main-color;
 }
 
 .remember_field {
@@ -45,7 +47,7 @@
   text-align: center;
   max-width: 240px;
   margin: 0 auto;
-  background-color: skyblue;
+  background-color: $main-color;
   padding: 16px 8px;
   border-radius: 4px;
   margin-bottom: 36px;
@@ -53,7 +55,7 @@
 
 .user_delete_button {
   display: block;
-  color: red;
+  color: $sub-color-red;
   max-width: 200px;
   margin: 0 auto 36px;
   text-align: center;
@@ -64,5 +66,5 @@
   text-align: center;
   margin-bottom: 36px;
   text-decoration: underline;
-  color: skyblue;
+  color: $main-color;
 }
