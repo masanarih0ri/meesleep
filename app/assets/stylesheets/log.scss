@@ -5,24 +5,26 @@
   font-size: 20px;
   margin-bottom: 36px;
   line-height: 32px;
+  color: $text-color;
 }
 
 .log_table {
   width: 100%;
-  border: 1px solid #e0e0e0;
+  border: 1px solid $border-color;
   border-collapse: collapse;
   margin-bottom: 36px;
+  color: $text-color;
 }
 
 .log_table_header {
-  border: 1px solid #e0e0e0;
+  border: 1px solid $border-color;
   padding: 8px;
   font-weight: bold;
-  background-color: #e0e0e0;
+  background-color: $border-color;
 }
 
 .log_table_data {
-  border: 1px solid #e0e0e0;
+  border: 1px solid $border-color;
   padding: 8px;
   vertical-align: middle;
 }
@@ -33,6 +35,12 @@
   background-color: $main-color;
   border-radius: 4px;
   padding: 12px 4px;
+  color: $white;
+  transition: all 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 .log_blank_text {
@@ -50,6 +58,12 @@
   border-radius: 50%;
   text-align: center;
   margin: 0 auto;
+  color: $white;
+  transition: all 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 .log_message_to_user {
@@ -70,7 +84,7 @@
   .log_form_date_field {
     display: block;
     width: 100%;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid $border-color;
     padding-bottom: 8px;
     position: relative;
 
