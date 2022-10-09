@@ -5,6 +5,7 @@
   font-size: 20px;
   margin-bottom: 36px;
   line-height: 32px;
+  color: $text-color;
 }
 
 .user_form_field {
@@ -13,7 +14,7 @@
   width: 100%;
   margin-bottom: 16px;
   padding: 16px 0;
-  border-bottom: 2px solid #eaeaea;
+  border-bottom: 2px solid $border-color;
   padding-bottom: 16px;
   transition: all 0.5s ease 0s;
 
@@ -23,21 +24,28 @@
   }
 
   &::placeholder {
-    color: #757575;
+    color: $text-color;
   }
 }
 
 .user_form_info_text {
   margin-bottom: 16px;
   text-align: center;
+  color: $text-color;
 }
 
 .user_form_info_link {
   text-decoration: underline;
   color: $main-color;
+  transition: all 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 .remember_field {
+  color: $text-color;
   margin-bottom: 36px;
 }
 
@@ -51,6 +59,12 @@
   padding: 16px 8px;
   border-radius: 4px;
   margin-bottom: 36px;
+  color: $white;
+  transition: all 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 .user_delete_button {
@@ -67,4 +81,10 @@
   margin-bottom: 36px;
   text-decoration: underline;
   color: $main-color;
+
+  transition: all 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
