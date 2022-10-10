@@ -46,6 +46,7 @@
 .log_blank_text {
   text-align: center;
   margin: 64px 0;
+  color: $text-color;
 }
 
 .log_create_link_button {
@@ -70,6 +71,7 @@
   line-height: 24px;
   margin-bottom: 36px;
   font-size: 20px;
+  color: $text-color;
 }
 
 .log_form_date {
@@ -79,6 +81,7 @@
     display: block;
     font-weight: bold;
     margin-bottom: 8px;
+    color: $text-color;
   }
 
   .log_form_date_field {
@@ -100,6 +103,7 @@
 .form_item_detail {
   margin-bottom: 8px;
   font-weight: bold;
+  color: $text-color;
 }
 
 .form_item_contents {
@@ -112,6 +116,7 @@
 
 .form_radio_button:checked + .form_radio_label {
   background-color: $main-color;
+  color: $white;
 }
 
 .form_item_buttons {
@@ -130,6 +135,12 @@
   border-radius: 4px;
   width: 100px;
   text-align: center;
+  color: $text-color;
+  transition: all 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 .log_submit_button {
@@ -142,6 +153,12 @@
   padding: 16px 8px;
   border-radius: 4px;
   margin-bottom: 36px;
+  color: $white;
+  transition: all 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 .log_delete_button {
@@ -154,4 +171,5 @@
   padding: 16px 8px;
   border-radius: 4px;
   margin-bottom: 36px;
+  color: $white;
 }
