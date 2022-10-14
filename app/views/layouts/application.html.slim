@@ -17,7 +17,7 @@ html lang="ja"
             = link_to image_tag('logo.png', class: 'header_logo_image'), root_path
           .menu_contents
             = link_to image_tag('setting.png', class: 'header_setting_image'),edit_user_registration_path, class: 'header_setting_link'
-        .main
+        section.main
           - if notice
             p.notice = notice
           - if alert
