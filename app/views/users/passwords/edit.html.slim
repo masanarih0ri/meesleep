@@ -1,6 +1,6 @@
 - set_meta_tags title: 'パスワード変更', description: 'Sleepleのパスワード変更ページです。'
 
-h2.user_page_title = t('devise.passwords.edit.change_your_password')
+h1.user_page_title = t('devise.passwords.edit.change_your_password')
 = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f|
   = render  "users/shared/error_messages", resource: resource
   = f.hidden_field :reset_password_token
