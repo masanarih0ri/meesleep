@@ -1,26 +1,30 @@
+@import 'variable';
+
 .log_page_title {
   text-align: center;
   font-size: 20px;
   margin-bottom: 36px;
   line-height: 32px;
+  color: $text-color;
 }
 
 .log_table {
   width: 100%;
-  border: 1px solid #e0e0e0;
+  border: 1px solid $border-color;
   border-collapse: collapse;
   margin-bottom: 36px;
+  color: $text-color;
 }
 
 .log_table_header {
-  border: 1px solid #e0e0e0;
+  border: 1px solid $border-color;
   padding: 8px;
   font-weight: bold;
-  background-color: #e0e0e0;
+  background-color: $border-color;
 }
 
 .log_table_data {
-  border: 1px solid #e0e0e0;
+  border: 1px solid $border-color;
   padding: 8px;
   vertical-align: middle;
 }
@@ -28,32 +32,46 @@
 .log_table_link {
   display: block;
   text-align: center;
-  background-color: skyblue;
+  background-color: $main-color;
   border-radius: 4px;
   padding: 12px 4px;
+  color: $white;
+  transition: all 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 .log_blank_text {
   text-align: center;
   margin: 64px 0;
+  color: $text-color;
 }
 
 .log_create_link_button {
   display: block;
   font-size: 32px;
   line-height: 64px;
-  background-color: skyblue;
+  background-color: $main-color;
   width: 64px;
   height: 64px;
   border-radius: 50%;
   text-align: center;
   margin: 0 auto;
+  color: $white;
+  transition: all 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 .log_message_to_user {
   line-height: 24px;
   margin-bottom: 36px;
   font-size: 20px;
+  color: $text-color;
 }
 
 .log_form_date {
@@ -63,12 +81,13 @@
     display: block;
     font-weight: bold;
     margin-bottom: 8px;
+    color: $text-color;
   }
 
   .log_form_date_field {
     display: block;
     width: 100%;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid $border-color;
     padding-bottom: 8px;
     position: relative;
 
@@ -84,6 +103,7 @@
 .form_item_detail {
   margin-bottom: 8px;
   font-weight: bold;
+  color: $text-color;
 }
 
 .form_item_contents {
@@ -95,7 +115,8 @@
 }
 
 .form_radio_button:checked + .form_radio_label {
-  background-color: skyblue;
+  background-color: $main-color;
+  color: $white;
 }
 
 .form_item_buttons {
@@ -108,12 +129,18 @@
 .form_radio_label {
   transition: all 0.3s ease 0s;
   margin: 8px;
-  border: 1px solid skyblue;
+  border: 1px solid $main-color;
   display: block;
   padding: 12px 16px;
   border-radius: 4px;
   width: 100px;
   text-align: center;
+  color: $text-color;
+  transition: all 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 .log_submit_button {
@@ -122,10 +149,16 @@
   text-align: center;
   max-width: 240px;
   margin: 0 auto;
-  background-color: skyblue;
+  background-color: $main-color;
   padding: 16px 8px;
   border-radius: 4px;
   margin-bottom: 36px;
+  color: $white;
+  transition: all 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 .log_delete_button {
@@ -134,8 +167,9 @@
   text-align: center;
   max-width: 240px;
   margin: 0 auto;
-  background-color: red;
+  background-color: $sub-color-red;
   padding: 16px 8px;
   border-radius: 4px;
   margin-bottom: 36px;
+  color: $white;
 }

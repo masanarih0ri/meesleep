@@ -1,4 +1,6 @@
-h2.user_page_title = t('devise.registrations.new.sign_up')
+- set_meta_tags title: 'アカウント登録', description: 'Sleepleのアカウント登録ページです。どなたでも無料で利用することができます。'
+
+h1.user_page_title = t('devise.registrations.new.sign_up')
 
 = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
   = render "users/shared/error_messages", resource: resource

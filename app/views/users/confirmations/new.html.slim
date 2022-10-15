@@ -1,4 +1,6 @@
-h2.user_page_title = t('devise.confirmations.new.resend_confirmation_instructions')
+- set_meta_tags title: 'アカウント認証メール再送', description: 'Sleepleのアカウント認証メール再送ページです。再度、アカウント認証メールの送信ができます。'
+
+h1.user_page_title = t('devise.confirmations.new.resend_confirmation_instructions')
 
 = form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f|
   = render "users/shared/error_messages", resource: resource

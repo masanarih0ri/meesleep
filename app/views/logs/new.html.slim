@@ -1,4 +1,7 @@
-- title '睡眠習慣ログの作成'
+- set_meta_tags title: '睡眠習慣ログの作成', description: 'Sleepleの睡眠習慣ログの作成ページです。いくつかの質問に答えると、良い睡眠習慣を実行できているかを判定できます。'
+
+h1.log_page_title = '睡眠習慣ログ作成'
+
 .log_message_to_user
   - if current_user.present?
     p = "#{current_user.name}さん"

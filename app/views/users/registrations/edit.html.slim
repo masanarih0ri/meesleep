@@ -1,4 +1,6 @@
-h2.user_page_title = t('devise.registrations.edit.title')
+- set_meta_tags title: 'ユーザー編集', description: 'Sleepleのユーザー情報の編集ページです。ユーザー名、メールアドレス、パスワードの変更ができます。'
+
+h1.user_page_title = t('devise.registrations.edit.title')
 
 = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
   = render "users/shared/error_messages", resource: resource
