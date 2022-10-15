@@ -161,15 +161,17 @@
   }
 }
 
-.log_delete_button {
+.log_delete_link {
   display: block;
-  width: 100%;
+  text-decoration: underline;
   text-align: center;
-  max-width: 240px;
+  max-width: 40px;
   margin: 0 auto;
-  background-color: $sub-color-red;
-  padding: 16px 8px;
-  border-radius: 4px;
   margin-bottom: 36px;
-  color: $white;
+  color: $sub-color-red;
+  transition: all 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
