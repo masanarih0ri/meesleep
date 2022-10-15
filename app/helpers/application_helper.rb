@@ -7,24 +7,23 @@ module ApplicationHelper
       reverse: true,
       charset: 'utf-8',
       description: '良い睡眠習慣をつくるための生活改善アプリ',
-      viewport: 'width=device-width, initial-scale=1.0'
+      viewport: 'width=device-width, initial-scale=1.0',
 
-      # TODO: OGPの設定は画像ができてから別途行う
-      # og: {
-      #   title: :title,
-      #   type: 'website',
-      #   site_name: 'Sleeple',
-      #   description: :description,
-      #   image: 'https://sleeple.app/ogp/ogp.png',
-      #   url: 'https://sleeple.app.jp'
-      # },
-      # twitter: {
-      #   card: 'summary',
-      #   site: '@sleeple_app',
-      #   description: :description,
-      #   image: 'https://sleeple.app/ogp/ogp.png',
-      #   domain: 'https://sleeple.app'
-      # }
+      og: {
+        site_name: 'Sleeple',
+        title: :title,
+        type: 'website',
+        description: :description,
+        url: request.original_url,
+        image: image_url('ogp.png'),
+        locale: 'ja_JP'
+      },
+      twitter: {
+        card: 'summary_large_image',
+        description: :description,
+        url: request.original_url,
+        image: image_url('ogp.png')
+      }
     }
   end
 end
