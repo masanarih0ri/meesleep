@@ -14,9 +14,9 @@ html lang="ja"
       .content
         nav.header
           .logo
-            = link_to image_tag('logo.png', class: 'header_logo_image'), root_path
+            = link_to image_tag('logo.png', class: 'header_logo_image', alt: 'TOPページを表示'), root_path
           .menu_contents
-            = link_to image_tag('setting.png', class: 'header_setting_image'),edit_user_registration_path, class: 'header_setting_link'
+            = link_to image_tag('setting.png', class: 'header_setting_image', alt; 'ユーザー設定画面を表示'),edit_user_registration_path, class: 'header_setting_link'
         section.main
           - if notice
             p.notice = notice
