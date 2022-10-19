@@ -1,5 +1,8 @@
+@import 'variable';
+
 .term {
   margin-bottom: 36px;
+  color: $text-color;
 }
 
 .term_title {
@@ -7,6 +10,10 @@
   font-weight: bold;
   text-align: center;
   margin-bottom: 36px;
+}
+
+.term_description {
+  margin-bottom: 16px;
 }
 
 .term_section_title {
@@ -30,4 +37,3 @@
     list-style-type: lower-alpha;
   }
 }
-
