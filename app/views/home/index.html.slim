@@ -39,9 +39,6 @@
       br
       |
         チェックすることができます。
-  .top_about_image
-    / 画像
-    / p = 'ここにアプリイメージ画像 or gif'
 .top_recommend
   h2.section_subtitle = 'Recommend'
   h3.section_title = 'こんな人におすすめ'
@@ -51,9 +48,6 @@
       li.top_recommend_example = '朝、スッキリ起きられない'
       li.top_recommend_example = '深夜に起き、そのまま朝になる'
   .top_recommend_detail
-    p.top_recommend_detail_text = 'このアプリを使うと、毎日、良い睡眠のための習慣に意識を向けることになり、ご自身の睡眠の状態を改善していくことができます。'
-
-    / この機能は入れるかまだ決めていないので、一旦文言から削除
-    / p.top_recommend_detail_text = '習慣を登録すると、睡眠に関しての耳より情報をランダムで見れる機能も搭載していますので、自分の習慣を振り返りながら、睡眠に対しての正しい知識をつけていくことも可能です。'
+    p.top_recommend_detail_text = 'このアプリを使うと、毎日、良い睡眠のための習慣に意識を向けることができます。ご自身の睡眠の状態を改善に役立ててください。'
 .top_register_link
   = link_to '無料で新規登録する', new_user_registration_path, class: 'top_register_link_button'
