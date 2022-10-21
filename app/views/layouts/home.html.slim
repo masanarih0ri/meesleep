@@ -19,4 +19,7 @@ html lang="ja"
             p.alert = alert
           = yield
         .footer
+          .terms_and_policies
+            = link_to '利用規約', terms_path, class: 'terms_and_policies_link'
+            = link_to 'プライバシーポリシー', policies_path, class: 'terms_and_policies_link'
           | ©︎ 2022- masanari hori
