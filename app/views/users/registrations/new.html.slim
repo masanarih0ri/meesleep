@@ -15,5 +15,12 @@ h1.user_page_title = t('devise.registrations.new.sign_up')
     = f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "確認用パスワード#{t('devise.shared.minimum_password_length', count: @minimum_password_length)}", class: 'user_form_field'
   .actions
     = f.submit t('devise.shared.links.sign_up'), class: 'user_submit_button'
+.terms_and_policies_links
+  p
+    | 上記のボタンをクリックすることで、
+    = link_to '利用規約', terms_path, class: 'policy_link'
+    | および
+    = link_to 'プライバシーポリシー', policies_path, class: 'policy_link'
+    | に同意するものとします。
 
 = render "users/shared/links"

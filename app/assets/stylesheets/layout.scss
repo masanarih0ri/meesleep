@@ -47,6 +47,22 @@
       padding: 8px;
       font-size: 12px;
       color: $white;
+
+      .terms_and_policies {
+        display: flex;
+        justify-content: space-around;
+        max-width: 240px;
+        margin: 16px auto;
+        text-decoration: underline;
+      }
+
+      .terms_and_policies_link {
+        transition: all 0.3s;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
     }
   }
 }
