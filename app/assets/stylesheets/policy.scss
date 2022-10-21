@@ -1,11 +1,13 @@
+@import 'variable';
+
 .policy {
   margin-bottom: 36px;
+  color: $text-color;
 }
 
 .policy_intro {
   margin-bottom: 36px;
   line-height: 1.8;
-  font-size: 12px;
 }
 
 .policy_title {
@@ -13,6 +15,10 @@
   font-weight: bold;
   text-align: center;
   margin-bottom: 36px;
+}
+
+.policy_description {
+  margin-bottom: 16px;
 }
 
 .policy_section_title {
@@ -35,4 +41,15 @@
     line-height: 1.8;
     list-style-type: lower-alpha;
   }
+
+  .policy_section_ol_sub_item_roman {
+    margin-left: 72px;
+    margin-bottom: 8px;
+    line-height: 1.8;
+    list-style-type: lower-roman;
+  }
+}
+
+.policy_link {
+  text-decoration: underline;
 }
