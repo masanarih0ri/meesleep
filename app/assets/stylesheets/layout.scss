@@ -40,6 +40,8 @@
     }
 
     .footer {
+      position: sticky;
+      top: 100vh;
       background-color: $main-color;
       text-align: center;
       width: 100%;
