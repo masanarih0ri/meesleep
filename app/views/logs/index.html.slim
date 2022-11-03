@@ -3,7 +3,13 @@
 h1.log_page_title = '睡眠習慣ログ一覧'
 
 - if @logs.blank?
-  p.log_blank_text = '睡眠習慣の記録がまだありません。'
+  .log_blank_text_area
+    p.log_blank_text = '睡眠習慣のログがまだありません。'
+    p.log_blank_text
+      | まずは
+      = link_to '良質睡眠習慣チェックリスト', new_log_path, class: 'log_blank_text_link'
+      | のページで
+    p.log_blank_text = '睡眠習慣をチェックしてみましょう。'
 - else
   table.log_table
     thead
@@ -18,4 +24,4 @@ h1.log_page_title = '睡眠習慣ログ一覧'
           td.log_table_data = l log.registered_on
           td.log_table_data = log.score
           td.log_table_data = link_to '編集', edit_log_path(log), class: 'log_table_link'
-= link_to '+', new_log_path, class: 'log_create_link_button'
+= link_to 'チェックリストで記録する', new_log_path, class: 'log_create_link_button'
