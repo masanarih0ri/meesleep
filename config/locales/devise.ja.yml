@@ -22,6 +22,7 @@ ja:
     registrations:
       edit:
         title: ユーザー編集
+      signed_up_but_unconfirmed: 本人確認のためのメールを送信しました。メール内のリンクからアカウントを有効化させてください。
     passwords:
       new:
         send_me_reset_password_instructions: 'パスワード再設定'
