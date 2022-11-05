@@ -8,10 +8,16 @@
 
   .content {
     overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
     max-width: 480px;
     height: 100vh;
     background-color: $white;
     margin: 0 auto;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
     .main {
       padding: 32px 20px;
