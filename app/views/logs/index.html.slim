@@ -5,10 +5,7 @@ h1.log_page_title = '睡眠習慣ログ一覧'
 - if @logs.blank?
   .log_blank_text_area
     p.log_blank_text = '睡眠習慣のログがまだありません。'
-    p.log_blank_text
-      | まずは
-      = link_to '良質睡眠習慣チェックリスト', new_log_path, class: 'log_blank_text_link'
-      | のページで
+    p.log_blank_text = 'まずは良質睡眠習慣チェックリストで'
     p.log_blank_text = '睡眠習慣をチェックしてみましょう。'
 - else
   table.log_table
