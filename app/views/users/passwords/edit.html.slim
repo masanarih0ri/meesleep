@@ -6,9 +6,11 @@ h1.user_page_title = t('devise.passwords.edit.change_your_password')
   = f.hidden_field :reset_password_token
   .field
     - if @minimum_password_length
-      = f.password_field :password, autocomplete: "new-password", placeholder: "パスワード#{t('devise.shared.minimum_password_length', count: @minimum_password_length)}", class: 'user_form_field'
+      = f.label :password, "パスワード#{t('devise.shared.minimum_password_length', count: @minimum_password_length)}", class: 'user_form_label'
+      = f.password_field :password, autocomplete: "new-password", class: 'user_form_field'
   .field
-    = f.password_field :password_confirmation, autocomplete: "new-password", placeholder: 'パスワード（確認用）', class: 'user_form_field'
+    = f.label :password_confirmation, 'パスワード（確認用）', class: 'user_form_label'
+    = f.password_field :password_confirmation, autocomplete: "new-password", class: 'user_form_field'
   .actions
     = f.submit t('devise.passwords.edit.change_my_password'), class: 'user_submit_button'
 = render "users/shared/links"

@@ -25,7 +25,8 @@ ja:
       signed_up_but_unconfirmed: 本人確認のためのメールを送信しました。メール内のリンクからアカウントを有効化させてください。
     passwords:
       new:
-        send_me_reset_password_instructions: 'パスワード再設定'
+        send_me_reset_password_instructions: 再設定用メール送信
+        forgot_your_password: パスワード再設定
     mailer:
       confirmation_instructions:
         subject: 【Sleeple】アカウント認証メール
