@@ -16,9 +16,9 @@ h1.user_page_title = t('devise.registrations.new.sign_up')
       = f.password_field :password, autocomplete: "new-password", class: 'user_form_field'
   .field
     = f.label :password_confirmation, 'パスワード（確認用）', class: 'user_form_label'
-    = f.password_field :password_confirmation, autocomplete: "new-password", class: 'user_form_field'
+    = f.password_field :password_confirmation, autocomplete: "new-password", class: 'user_form_field user_form_field_last'
   .actions
-    = f.submit t('devise.shared.links.sign_up'), class: 'user_submit_button'
+    = f.submit t('devise.shared.links.sign_up'), class: 'user_submit_button user_submit_button_register'
 .terms_and_policies_links
   p
     | 上記のボタンをクリックすることで、
