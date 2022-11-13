@@ -51,16 +51,6 @@
     margin: 16px 0;
     color: $text-color;
   }
-
-  .log_blank_text_link {
-    color: $main-color;
-    text-decoration: underline;
-    transition: all 0.3s;
-
-    &:hover {
-      opacity: 0.8;
-    }
-  }
 }
 
 .log_create_link_button {
