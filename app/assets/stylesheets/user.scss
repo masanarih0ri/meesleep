@@ -31,6 +31,10 @@
   &::placeholder {
     color: $text-color-light;
   }
+
+  &_last {
+    margin-bottom: 36px;
+  }
 }
 
 .user_form_info_text {
@@ -59,16 +63,19 @@
   width: 100%;
   text-align: center;
   max-width: 240px;
-  margin: 0 auto;
+  margin: 0 auto 36px;
   background-color: $main-color;
   padding: 16px 8px;
   border-radius: 4px;
-  margin-bottom: 36px;
   color: $white;
   transition: all 0.3s;
 
   &:hover {
     opacity: 0.8;
+  }
+
+  &_register {
+    margin: 0 auto 16px;
   }
 }
 
