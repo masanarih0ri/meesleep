@@ -35,6 +35,7 @@ gem 'meta-tags'
 gem 'net-imap'
 gem 'net-pop'
 gem 'net-smtp', require: false
+gem 'simple_calendar', '~> 2.4'
 gem 'slim'
 
 group :development, :test do

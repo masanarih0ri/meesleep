@@ -8,20 +8,21 @@ h1.log_page_title = '睡眠習慣ログ一覧'
     p.log_blank_text = 'まずは良質睡眠習慣チェックリストで'
     p.log_blank_text = '睡眠習慣をチェックしてみましょう。'
 - else
-  table.log_table
-    thead
-      tr
-        th.log_table_header = '日付'
-        th.log_table_header = '習慣スコア'
-        th.log_table_header
-          | &nbsp;
-    tbody
-      - @logs.each do |log|
-        tr
-          td.log_table_data = l log.registered_on
-          td.log_table_data = log.score
-          td.log_table_data = link_to '編集', edit_log_path(log), class: 'log_table_link'
-
+  .log_calendar
+    = month_calendar(events: @logs, attribute: :registered_on) do |date, logs|
+      = date.day
+      - logs.each do |log|
+        .log_calendar_item
+          = link_to edit_log_path(log) do
+            .log_calendar_item_icon
+              - if log.score > 75
+                i.fa-2x.fa-regular.fa-face-laugh
+              - elsif log.score > 50
+                i.fa-2x.fa-regular.fa-face-meh
+              - else
+                i.fa-2x.fa-regular.fa-face-frown
+            .log_calendar_item_score
+              = log.score
 = link_to new_log_path, class: 'log_create_link_button' do
   i.fa-solid.fa-plus
   | チェックリストで記録する
