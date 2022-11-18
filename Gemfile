@@ -35,8 +35,8 @@ gem 'meta-tags'
 gem 'net-imap'
 gem 'net-pop'
 gem 'net-smtp', require: false
-gem 'slim'
 gem 'simple_calendar', '~> 2.4'
+gem 'slim'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
