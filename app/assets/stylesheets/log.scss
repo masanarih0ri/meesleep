@@ -8,6 +8,33 @@
   color: $text-color;
 }
 
+.log_calendar {
+  margin-bottom: 36px;
+  color: $text-color;
+
+  .calendar-heading {
+    text-align: center;
+    margin-bottom: 16px;
+    font-size: 20px;
+
+    .calendar-title {
+      margin: 0 8px;
+    }
+  }
+
+  .log_calendar_item {
+    text-align: center;
+
+    .log_calendar_item_icon {
+      padding: 4px;
+    }
+
+    .log_calendar_item_score {
+      font-size: 12px;
+    }
+  }
+}
+
 .log_table {
   width: 100%;
   border: 1px solid $border-color;
