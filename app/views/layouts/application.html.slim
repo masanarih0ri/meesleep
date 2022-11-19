@@ -17,9 +17,10 @@ html lang="ja"
         - if user_signed_in?
           nav.header
             .logo
-              = link_to image_tag('logo.png', class: 'header_logo_image', alt: 'TOPページを表示'), root_path
+              = link_to image_tag('logo_white_color.png', class: 'header_logo_image', alt: 'TOPページを表示'), root_path
             .menu_contents
-              = link_to image_tag('setting.png', class: 'header_setting_image', alt: 'ユーザー設定画面を表示'),edit_user_registration_path, class: 'header_setting_link'
+              = link_to edit_user_registration_path, class: 'header_setting_link' do
+                i.fa-lg.fa-solid.fa-gear
         section.main
           - if notice
             p.notice = notice

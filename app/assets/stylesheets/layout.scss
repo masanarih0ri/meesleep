@@ -14,6 +14,7 @@
     height: 100vh;
     background-color: $white;
     margin: 0 auto;
+    background: $background-base-color;
 
     &::-webkit-scrollbar {
       display: none;
@@ -43,18 +44,19 @@
     .header_setting_link {
       display: block;
       padding: 12px;
+      color: $white;
     }
 
     .footer {
       position: sticky;
       top: 100vh;
-      background-color: $main-color;
+      background-color: $background-base-color;
       text-align: center;
       width: 100%;
       line-height: 18px;
       padding: 8px;
       font-size: 12px;
-      color: $white;
+      color: $text-color;
 
       .terms_and_policies {
         display: flex;
