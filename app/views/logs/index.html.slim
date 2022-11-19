@@ -16,11 +16,11 @@ h1.log_page_title = '睡眠習慣ログ一覧'
           = link_to edit_log_path(log) do
             .log_calendar_item_icon
               - if log.score > 75
-                i.fa-2x.fa-regular.fa-face-laugh
+                i.fa-lg.fa-regular.fa-face-laugh
               - elsif log.score > 50
-                i.fa-2x.fa-regular.fa-face-meh
+                i.fa-lg.fa-regular.fa-face-meh
               - else
-                i.fa-2x.fa-regular.fa-face-frown
+                i.fa-lg.fa-regular.fa-face-frown
             .log_calendar_item_score
               = log.score
 = link_to new_log_path, class: 'log_create_link_button' do
