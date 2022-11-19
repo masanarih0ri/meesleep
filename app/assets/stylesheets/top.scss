@@ -78,40 +78,47 @@
   letter-spacing: 1px;
 }
 
-.top_about_summary {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 36px;
+.top_about {
+  padding: 0 12px;
 
-  .top_about_summary_text {
-    color: $text-color;
-    line-height: 28px;
-  }
+  .top_about_summary {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 36px;
 
-  .top_about_summary_image {
-    color: $main-color;
-    margin-left: 24px;
-  }
+    .top_about_summary_text {
+      color: $text-color;
+      line-height: 28px;
+    }
 
-}
-
-.top_recommend_summary {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 36px;
-
-  .top_recommend_summary_text {
-    color: $text-color;
-    line-height: 28px;
-
-    .bold {
-      font-weight: bold;
-      margin-bottom: 16px;
+    .top_about_summary_image {
+      color: $main-color;
+      margin-left: 24px;
     }
   }
+}
 
-  .top_recommend_summary_image {
-    color: $main-color;
-    margin-left: 24px;
+.top_recommend {
+  padding: 0 12px;
+  
+  .top_recommend_summary {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 36px;
+
+    .top_recommend_summary_text {
+      color: $text-color;
+      line-height: 28px;
+
+      .bold {
+        font-weight: bold;
+        margin-bottom: 16px;
+      }
+    }
+
+    .top_recommend_summary_image {
+      color: $main-color;
+      margin-left: 24px;
+    }
   }
 }
