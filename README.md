@@ -56,3 +56,15 @@ $ bin/rails s
 > Question.create!(content: '適当な質問用の文章', is_active: true)
 ```
 * 上記を1回実行すると1つの質問ができるため、5個程度文章を変えてデータを作成しておくと実際の動作に近づけられるのでそれを行うことを推奨
+
+## 開発時のテストやLinterの動作
+### rubocop
+
+```
+$ rubocop
+```
+
+### RSpec
+```
+$ bundle exec rspec
+```
