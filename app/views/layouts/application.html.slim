@@ -9,7 +9,7 @@ html lang="ja"
     link rel="apple-touch-icon" href="#{image_path("favicon.png")}" sizes="180x180" type="image/png"
     link rel="icon" href="#{image_path("favicon.png")}" sizes="192x192" type="image/png"
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true
     = render 'layouts/google_analytics'
   body
     .content_wrapper
