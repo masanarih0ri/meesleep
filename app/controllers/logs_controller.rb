@@ -21,7 +21,7 @@ class LogsController < ApplicationController
       flash[:notice] = 'ログを登録しました'
       redirect_to logs_path
     else
-      flash[:alert] = 'ログを登録できませんでした'
+      flash[:alert] = "ログを登録できませんでした。#{@log.errors.full_messages.join('')}"
       render :new
     end
   end
