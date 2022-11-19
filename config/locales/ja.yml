@@ -1,8 +1,22 @@
 ja:
   activerecord:
+    attributes:
+      log:
+        registered_on: 登録日
+      answers:
+        is_good_habit: チェックシートの回答
     errors:
       messages:
         record_invalid: 'バリデーションに失敗しました: %{errors}'
+      models:
+        log:
+          attributes:
+            registered_on:
+              taken: は既に登録されている日付です。
+        answer:
+          attributes:
+            is_good_habit:
+              inclusion: は必ず選択してください。
   time:
     formats:
       default: '%F'
