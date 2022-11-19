@@ -14,8 +14,7 @@
     height: 100vh;
     background-color: $white;
     margin: 0 auto;
-    // こっちに書いた方がいい
-    background: #fcfcfc;
+    background: $background-base-color;
 
     &::-webkit-scrollbar {
       display: none;
