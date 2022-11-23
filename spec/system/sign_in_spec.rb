@@ -8,7 +8,7 @@ RSpec.describe 'Users', type: :system do
       visit user_session_path
       fill_in 'メールアドレス', with: user.email
       fill_in 'パスワード', with: user.password
-      click_button 'ログイン'
+      click_on 'ログイン'
 
       expect(page).to have_content '睡眠習慣ログ一覧'
       expect(current_path).to eq logs_path
