@@ -8,7 +8,6 @@ RSpec.describe 'Logs', type: :request do
 
     context 'when the user is logged in' do
       before do
-        user.confirm
         sign_in user
       end
 
@@ -45,7 +44,6 @@ RSpec.describe 'Logs', type: :request do
 
     context 'when the user is logged in' do
       before do
-        user.confirm
         sign_in user
       end
 
@@ -91,7 +89,6 @@ RSpec.describe 'Logs', type: :request do
 
     context 'when the user is logged in' do
       before do
-        user.confirm
         sign_in user
       end
 
@@ -127,7 +124,6 @@ RSpec.describe 'Logs', type: :request do
 
     context 'when the user is logged in' do
       before do
-        user.confirm
         sign_in user
       end
 
@@ -158,7 +154,6 @@ RSpec.describe 'Logs', type: :request do
 
     context 'when the user is logged in' do
       before do
-        user.confirm
         sign_in user
       end
 
@@ -206,7 +201,6 @@ RSpec.describe 'Logs', type: :request do
 
     context 'when the user is logged in' do
       before do
-        user.confirm
         sign_in user
       end
 

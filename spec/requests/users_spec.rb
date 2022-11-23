@@ -7,7 +7,6 @@ RSpec.describe 'Users', type: :request do
     let!(:user) { create(:user) }
     context 'when the user is logged in' do
       before do
-        user.confirm
         sign_in user
       end
 
@@ -34,7 +33,6 @@ RSpec.describe 'Users', type: :request do
     let(:user_params) { { user: { name: 'new_user_name' } } }
 
     before do
-      user.confirm
       sign_in user
     end
 
