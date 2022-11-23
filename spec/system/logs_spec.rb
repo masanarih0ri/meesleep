@@ -8,6 +8,8 @@ RSpec.describe 'Users', type: :system do
     let!(:question1) { create(:question) }
     let!(:question2) { create(:question, content: '質問2') }
     let!(:log) { create(:log, user:) }
+    let!(:answer1) { create(:answer, log: log, question: question1) }
+    let!(:answer2) { create(:answer, log: log, question: question2) }
 
     before do
       visit user_session_path
@@ -57,9 +59,19 @@ RSpec.describe 'Users', type: :system do
       expect(current_path).to eq logs_path
     end
 
-    # it '睡眠習慣ログが編集できる' do
-
-    # end
+    it '睡眠習慣ログが編集できる' do
+      visit edit_log_path(log)
+      questions = all('.form_item_buttons')
+      within questions[0] do
+        choose_yes
+      end
+      within questions[1] do
+        choose_no
+      end
+      click_on '登録する'
+      expect(page).to have_content 'ログを更新しました'
+      expect(current_path).to eq logs_path
+    end
 
     it '睡眠習慣ログが削除できる' do
       visit edit_log_path(log)
