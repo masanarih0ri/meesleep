@@ -19,6 +19,13 @@ RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
+  config.before(:each, type: :system) do |example|
+    driven_by :selenium, screen_size: [1400, 1400], using: :headless_chrome do |options|
+      options.add_argument('--disable-dev-sim-usage')
+      options.add_argument('--no-sandbox')
+    end
+  end
+  
   config.expect_with :rspec do |expectations|
     # This option will default to `true` in RSpec 4. It makes the `description`
     # and `failure_message` of custom matchers include text for helper methods
