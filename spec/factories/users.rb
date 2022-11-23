@@ -5,5 +5,7 @@ FactoryBot.define do
     email { 'testuser1@example.com' }
     password { 'testuser1' }
     name { 'testuser1' }
+
+    after(:create) { |user| user.confirm }
   end
 end
