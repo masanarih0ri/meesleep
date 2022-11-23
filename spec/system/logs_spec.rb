@@ -12,6 +12,7 @@ RSpec.describe 'Users', type: :system do
     let!(:answer2) { create(:answer, log: log, question: question2) }
 
     before do
+      user.confirm
       visit user_session_path
       fill_in 'メールアドレス', with: user.email
       fill_in 'パスワード', with: user.password

@@ -7,6 +7,7 @@ RSpec.describe 'Users', type: :system do
     let!(:user) { create(:user) }
 
     before do
+      user.confirm
       visit user_session_path
       fill_in 'メールアドレス', with: user.email
       fill_in 'パスワード', with: user.password
