@@ -8,8 +8,8 @@ RSpec.describe 'Users', type: :system do
     let!(:question1) { create(:question) }
     let!(:question2) { create(:question, content: '質問2') }
     let!(:log) { create(:log, user:) }
-    let!(:answer1) { create(:answer, log: log, question: question1) }
-    let!(:answer2) { create(:answer, log: log, question: question2) }
+    let!(:answer1) { create(:answer, log:, question: question1) }
+    let!(:answer2) { create(:answer, log:, question: question2) }
 
     before do
       visit user_session_path
