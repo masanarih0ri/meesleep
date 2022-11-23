@@ -6,10 +6,6 @@ RSpec.describe 'Users', type: :system do
   describe 'ログインのテスト' do
     let!(:user) { create(:user) }
 
-    before do
-      user.confirm
-    end
-
     it 'ログインして睡眠習慣ログ一覧ページに遷移する' do
       visit user_session_path
       fill_in 'メールアドレス', with: user.email
