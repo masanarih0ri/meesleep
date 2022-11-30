@@ -218,7 +218,7 @@
   color: $calendar-header-text-color;
 }
 
-.simple-calendar td {
+.log_calendar .simple-calendar td {
   padding: 6px;
   vertical-align: top;
   width: 14%;
@@ -238,15 +238,15 @@
   font-size: 12px;
 }
 
-.simple-calendar .prev-month {
+.log_calendar .simple-calendar .prev-month {
   background-color: $calendar-prev-and-next-bg-color;
 }
 
-.simple-calendar .next-month {
+.log_calendar .simple-calendar .next-month {
   background-color: $calendar-prev-and-next-bg-color;
 }
 
-.simple-calendar .today {
+.log_calendar .simple-calendar .today {
   background-color: $calendar-today-bg-color;
   box-shadow: 0 0 0 1px $calendar-today-shadow-color inset;
 }
@@ -263,7 +263,7 @@ element.style {
   color: $calendar-elemnt-text-color;
 }
 
-.log_calendar .calendar-heading {
+.log_calendar .log_calendar .calendar-heading {
   text-align: center;
   margin-bottom: 16px;
   display: flex;
