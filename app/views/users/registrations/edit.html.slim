@@ -6,10 +6,10 @@ h1.user_page_title = t('devise.registrations.edit.title')
   = render "users/shared/error_messages", resource: resource
   .field
     = f.label :name, 'ユーザー名', class: 'user_form_label'
-    = f.text_field :name, autocomplete: "name", class: 'user_form_field'
+    = f.text_field :name, autocomplete: "name", placeholder: '睡眠太郎', class: 'user_form_field'
   .field
     = f.label :email, 'メールアドレス', class: 'user_form_label'
-    = f.email_field :email, autofocus: true, autocomplete: "email", class: 'user_form_field'
+    = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'taro@sleeple.com', class: 'user_form_field'
   - if devise_mapping.confirmable? && resource.pending_reconfirmation?
     = t('devise.registrations.edit.currently_waiting_confirmation_for_email', email: resource.unconfirmed_email)
   .field
