@@ -24,7 +24,8 @@
     text-align: center;
 
     .log_calendar_item_icon {
-      padding: 4px;
+      font-size: 18px;
+      padding: 4px 2px;
     }
 
     .log_calendar_item_score {
@@ -200,4 +201,90 @@
   &:hover {
     opacity: 0.8;
   }
+}
+
+.log_calendar .simple-calendar th {
+  padding: 6px;
+  border-bottom: 1px solid $calendar-header-border-color;
+  border-collapse: collapse;
+  border-left: 1px solid $calendar-header-border-color;
+  border-right: 1px solid $calendar-header-border-color;
+  border-top: 1px solid $calendar-header-border-color;
+  box-sizing: border-box;
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+  background-color: $calendar-header-bg-color;
+  color: $calendar-header-text-color;
+}
+
+.simple-calendar td {
+  padding: 6px;
+  vertical-align: top;
+  width: 14%;
+  border: 1px solid $calendar-data-border-color;
+  border-top-color: $calendar-data-border-color;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-right-color: $calendar-data-border-color;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-bottom-color: $calendar-data-border-color;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: $calendar-data-border-color;
+  border-left-style: solid;
+  border-left-width: 1px;
+  font-size: 12px;
+}
+
+.simple-calendar .prev-month {
+  background-color: $calendar-prev-and-next-bg-color;
+}
+
+.simple-calendar .next-month {
+  background-color: $calendar-prev-and-next-bg-color;
+}
+
+.simple-calendar .today {
+  background-color: $calendar-today-bg-color;
+  box-shadow: 0 0 0 1px $calendar-today-shadow-color inset;
+}
+
+element.style {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $calendar-elemnt-bg-color;
+  border-radius: 4px;
+  font-size: 16px;
+  color: $calendar-elemnt-text-color;
+}
+
+.log_calendar .calendar-heading {
+  text-align: center;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.log_calendar .calendar-heading .calendar-title {
+  font-size: 18px;
+}
+
+.fa-angle-left {
+  padding: 8px 12px;
+  border-radius: 4px;
+  background: $main-color;
+  color: $white;
+}
+
+.fa-angle-right {
+  padding: 8px 12px;
+  border-radius: 4px;
+  background: $main-color;
+  color: $white;
 }
