@@ -5,12 +5,10 @@
   font-size: 20px;
   margin-bottom: 36px;
   line-height: 32px;
-  color: $text-color;
 }
 
 .log_calendar {
   margin-bottom: 36px;
-  color: $text-color;
 
   .calendar-heading {
     text-align: center;
@@ -40,7 +38,6 @@
   border: 1px solid $border-color;
   border-collapse: collapse;
   margin-bottom: 36px;
-  color: $text-color;
 }
 
 .log_table_header {
@@ -76,7 +73,6 @@
   .log_blank_text {
     text-align: center;
     margin: 16px 0;
-    color: $text-color;
   }
 }
 
@@ -105,7 +101,6 @@
   line-height: 28px;
   margin-bottom: 36px;
   font-size: 16px;
-  color: $text-color;
 }
 
 .log_form_date {
@@ -115,7 +110,6 @@
     display: block;
     font-weight: bold;
     margin-bottom: 8px;
-    color: $text-color;
   }
 
   .log_form_date_field {
@@ -137,7 +131,6 @@
 .form_item_detail {
   margin-bottom: 8px;
   font-weight: bold;
-  color: $text-color;
 }
 
 .form_item_contents {
@@ -169,7 +162,6 @@
   border-radius: 4px;
   width: 100px;
   text-align: center;
-  color: $text-color;
   transition: all 0.3s;
 
   &:hover {
