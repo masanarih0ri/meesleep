@@ -192,10 +192,10 @@
 .log_delete_link {
   display: block;
   text-align: center;
-  max-width: 40px;
+  max-width: 120px;
   margin: 0 auto;
   margin-bottom: 36px;
-  color: $sub-color-red;
+  color: $text-color-light;
   transition: all 0.3s;
 
   &:hover {

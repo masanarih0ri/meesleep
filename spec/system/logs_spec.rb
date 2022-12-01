@@ -76,7 +76,7 @@ RSpec.describe 'Users', type: :system do
     it '睡眠習慣ログが削除できる' do
       visit edit_log_path(log)
       page.accept_confirm do
-        click_on '削除'
+        click_on '削除する'
       end
       expect(page).to have_content 'ログを削除しました'
       expect(current_path).to eq logs_path
