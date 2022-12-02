@@ -160,7 +160,7 @@
   border: 1px solid $button-color;
   color: $button-color;
   display: block;
-  padding: 12px 16px;
+  padding: 12px;
   border-radius: 4px;
   width: 100px;
   text-align: center;
@@ -168,6 +168,14 @@
 
   &:hover {
     opacity: 0.8;
+  }
+
+  .fa-face-laugh {
+    margin-right: 4px;
+  }
+
+  .fa-face-meh {
+    margin-right: 4px;
   }
 }
 
