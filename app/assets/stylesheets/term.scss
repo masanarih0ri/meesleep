@@ -2,6 +2,7 @@
 
 .term {
   margin-bottom: 36px;
+  line-height: 1.6;
 }
 
 .term_title {
@@ -25,13 +26,11 @@
   .term_section_ol_item {
     margin-left: 24px;
     margin-bottom: 8px;
-    line-height: 1.8;
   }
 
   .term_section_ol_sub_item {
     margin-left: 48px;
     margin-bottom: 8px;
-    line-height: 1.8;
     list-style-type: lower-alpha;
   }
 }
