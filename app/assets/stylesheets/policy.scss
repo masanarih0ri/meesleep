@@ -2,6 +2,7 @@
 
 .policy {
   margin-bottom: 36px;
+  line-height: 1.6;
 }
 
 .policy_intro {
@@ -30,20 +31,17 @@
   .policy_section_ol_item {
     margin-left: 24px;
     margin-bottom: 8px;
-    line-height: 1.8;
   }
 
   .policy_section_ol_sub_item {
     margin-left: 48px;
     margin-bottom: 8px;
-    line-height: 1.8;
     list-style-type: lower-alpha;
   }
 
   .policy_section_ol_sub_item_roman {
     margin-left: 72px;
     margin-bottom: 8px;
-    line-height: 1.8;
     list-style-type: lower-roman;
   }
 }
