@@ -5,6 +5,8 @@
   .log_form_answer
     = f.fields_for :answers, log.answers.sort_by(&:question_id) do |answer_form|
       .form_item_contents
+        .form_item_count
+          = answer_form.index + 1
         .form_item_detail
           = answer_form.object.question.content
           = answer_form.hidden_field :question_id, value: answer_form.object.question.id
