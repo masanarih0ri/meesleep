@@ -3,7 +3,7 @@
     = f.label :registered_on, 'いつの日の記録ですか？', class: 'log_form_date_label'
     = f.date_field :registered_on, class: 'log_form_date_field'
   .log_form_answer
-    = f.fields_for :answers, log.answers.sort_by(&:question_id) do |answer_form, index|
+    = f.fields_for :answers, log.answers.sort_by(&:question_id) do |answer_form|
       .form_item_contents
         .form_item_count
           = answer_form.index + 1
