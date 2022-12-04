@@ -116,15 +116,14 @@
   .log_form_date_field {
     display: block;
     width: 100%;
-    border-bottom: 1px solid $border-color;
-    padding-bottom: 8px;
-    position: relative;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    padding: 8px;
+    margin: 0 0 16px;
+    transition: all 0.3s;
 
-    &::-webkit-calendar-picker-indicator {
-      opacity: 0;
-      position: absolute;
-      width: 100%;
-      height: 100%;
+    &:focus {
+      border: 1px solid $main-color;
     }
   }
 }
